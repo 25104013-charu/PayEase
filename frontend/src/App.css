@@ -1,0 +1,849 @@
+/* =========================================
+   PAYEASE - PROFESSIONAL PAYMENT UI
+   ========================================= */
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family:
+        Inter,
+        -apple-system,
+        BlinkMacSystemFont,
+        "Segoe UI",
+        Roboto,
+        Arial,
+        sans-serif;
+
+    background:
+        radial-gradient(
+            circle at 10% 10%,
+            rgba(99, 102, 241, 0.22),
+            transparent 35%
+        ),
+        radial-gradient(
+            circle at 90% 90%,
+            rgba(37, 99, 235, 0.22),
+            transparent 35%
+        ),
+        linear-gradient(
+            135deg,
+            #0f172a,
+            #172554,
+            #1e1b4b
+        );
+
+    min-height: 100vh;
+    color: #0f172a;
+}
+
+/* =========================================
+   MAIN PAGE
+   ========================================= */
+
+.page {
+    min-height: 100vh;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    padding: 40px 20px;
+
+    position: relative;
+}
+
+/* Decorative background circles */
+
+.page::before {
+    content: "";
+    position: fixed;
+
+    width: 300px;
+    height: 300px;
+
+    border-radius: 50%;
+
+    background: rgba(59, 130, 246, 0.15);
+
+    top: -100px;
+    left: -100px;
+
+    filter: blur(20px);
+
+    pointer-events: none;
+}
+
+.page::after {
+    content: "";
+    position: fixed;
+
+    width: 280px;
+    height: 280px;
+
+    border-radius: 50%;
+
+    background: rgba(139, 92, 246, 0.14);
+
+    bottom: -100px;
+    right: -80px;
+
+    filter: blur(20px);
+
+    pointer-events: none;
+}
+
+/* =========================================
+   PAYMENT CARD
+   ========================================= */
+
+.payment-card,
+.success-card {
+
+    width: 100%;
+    max-width: 560px;
+
+    background: rgba(255, 255, 255, 0.97);
+
+    border-radius: 24px;
+
+    box-shadow:
+        0 25px 60px rgba(0, 0, 0, 0.25),
+        0 8px 20px rgba(0, 0, 0, 0.08);
+
+    overflow: hidden;
+
+    position: relative;
+    z-index: 2;
+
+    animation: cardAppear 0.5s ease;
+}
+
+@keyframes cardAppear {
+
+    from {
+        opacity: 0;
+        transform: translateY(20px) scale(0.98);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+    }
+}
+
+/* =========================================
+   HEADER
+   ========================================= */
+
+.header {
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    padding: 22px 28px;
+
+    background:
+        linear-gradient(
+            135deg,
+            #2563eb,
+            #4f46e5
+        );
+
+    color: white;
+}
+
+.logo {
+
+    font-size: 25px;
+    font-weight: 800;
+
+    letter-spacing: -0.5px;
+
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.logo::before {
+
+    content: "P";
+
+    width: 34px;
+    height: 34px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 10px;
+
+    background: rgba(255, 255, 255, 0.2);
+
+    font-size: 18px;
+    font-weight: 800;
+}
+
+.secure {
+
+    font-size: 14px;
+    font-weight: 600;
+
+    background: rgba(255, 255, 255, 0.14);
+
+    padding: 9px 13px;
+
+    border-radius: 30px;
+
+    backdrop-filter: blur(10px);
+}
+
+/* =========================================
+   CONTENT
+   ========================================= */
+
+.content {
+
+    padding: 36px 42px 32px;
+}
+
+.content h1 {
+
+    margin: 0;
+
+    font-size: 32px;
+
+    font-weight: 750;
+
+    letter-spacing: -1px;
+
+    color: #0f172a;
+
+    text-align: center;
+}
+
+.subtitle {
+
+    margin: 10px 0 28px;
+
+    text-align: center;
+
+    color: #64748b;
+
+    font-size: 15px;
+}
+
+/* =========================================
+   ORDER SUMMARY
+   ========================================= */
+
+.order-box {
+
+    background: #f8fafc;
+
+    border: 1px solid #e2e8f0;
+
+    border-radius: 16px;
+
+    padding: 20px;
+
+    margin-bottom: 28px;
+}
+
+.order-box h3 {
+
+    margin: 0 0 16px;
+
+    font-size: 16px;
+
+    color: #334155;
+
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.order-box h3::before {
+
+    content: "🧾";
+
+    font-size: 18px;
+}
+
+.row {
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    padding: 12px 0;
+
+    border-bottom: 1px solid #e2e8f0;
+
+    font-size: 14px;
+
+    gap: 20px;
+}
+
+.row:last-child {
+
+    border-bottom: none;
+
+    padding-bottom: 0;
+}
+
+.row span:first-child {
+
+    color: #64748b;
+}
+
+.row span:last-child {
+
+    font-weight: 600;
+
+    color: #1e293b;
+
+    text-align: right;
+}
+
+/* =========================================
+   LABEL
+   ========================================= */
+
+label {
+
+    display: block;
+
+    margin-bottom: 9px;
+
+    font-size: 14px;
+
+    font-weight: 700;
+
+    color: #334155;
+}
+
+/* =========================================
+   AMOUNT INPUT
+   ========================================= */
+
+.amount-input {
+
+    display: flex;
+
+    align-items: center;
+
+    border: 2px solid #e2e8f0;
+
+    border-radius: 14px;
+
+    overflow: hidden;
+
+    background: white;
+
+    margin-bottom: 20px;
+
+    transition: 0.2s;
+}
+
+.amount-input:focus-within {
+
+    border-color: #3b82f6;
+
+    box-shadow:
+        0 0 0 4px rgba(59, 130, 246, 0.12);
+}
+
+.amount-input span {
+
+    font-size: 21px;
+
+    font-weight: 700;
+
+    color: #475569;
+
+    padding-left: 17px;
+}
+
+.amount-input input {
+
+    width: 100%;
+
+    border: none;
+
+    outline: none;
+
+    padding: 15px 14px;
+
+    font-size: 22px;
+
+    font-weight: 700;
+
+    color: #0f172a;
+
+    background: transparent;
+}
+
+.amount-input input::-webkit-inner-spin-button,
+.amount-input input::-webkit-outer-spin-button {
+
+    opacity: 1;
+}
+
+/* =========================================
+   PRIMARY BUTTON
+   ========================================= */
+
+.pay-button {
+
+    width: 100%;
+
+    border: none;
+
+    border-radius: 13px;
+
+    padding: 15px 20px;
+
+    background:
+        linear-gradient(
+            135deg,
+            #2563eb,
+            #4f46e5
+        );
+
+    color: white;
+
+    font-size: 16px;
+
+    font-weight: 700;
+
+    cursor: pointer;
+
+    transition:
+        transform 0.2s,
+        box-shadow 0.2s,
+        opacity 0.2s;
+
+    box-shadow:
+        0 8px 18px rgba(37, 99, 235, 0.25);
+
+    margin-bottom: 10px;
+}
+
+.pay-button:hover {
+
+    transform: translateY(-2px);
+
+    box-shadow:
+        0 12px 25px rgba(37, 99, 235, 0.32);
+}
+
+.pay-button:active {
+
+    transform: translateY(0);
+}
+
+.pay-button:disabled {
+
+    opacity: 0.65;
+
+    cursor: not-allowed;
+
+    transform: none;
+}
+
+/* =========================================
+   SECONDARY BUTTONS
+   ========================================= */
+
+.history-button {
+
+    width: 100%;
+
+    border: 1px solid #dbe3ef;
+
+    border-radius: 13px;
+
+    padding: 13px 18px;
+
+    margin-top: 9px;
+
+    background: white;
+
+    color: #334155;
+
+    font-size: 14px;
+
+    font-weight: 600;
+
+    cursor: pointer;
+
+    transition: 0.2s;
+}
+
+.history-button:hover {
+
+    background: #f8fafc;
+
+    border-color: #93c5fd;
+
+    color: #2563eb;
+
+    transform: translateY(-1px);
+}
+
+/* =========================================
+   ERROR MESSAGE
+   ========================================= */
+
+.error {
+
+    margin-top: 18px;
+
+    padding: 13px 15px;
+
+    border-radius: 12px;
+
+    background: #fff7ed;
+
+    border: 1px solid #fed7aa;
+
+    color: #c2410c;
+
+    font-size: 14px;
+
+    font-weight: 600;
+
+    text-align: center;
+}
+
+/* =========================================
+   SECURITY MESSAGE
+   ========================================= */
+
+.security {
+
+    margin-top: 22px;
+
+    padding: 13px;
+
+    border-radius: 12px;
+
+    background: #f0fdf4;
+
+    border: 1px solid #bbf7d0;
+
+    color: #166534;
+
+    text-align: center;
+
+    font-size: 13px;
+
+    font-weight: 600;
+}
+
+/* =========================================
+   FOOTER
+   ========================================= */
+
+.footer {
+
+    padding: 17px;
+
+    text-align: center;
+
+    background: #f8fafc;
+
+    border-top: 1px solid #e2e8f0;
+
+    color: #64748b;
+
+    font-size: 12px;
+}
+
+/* =========================================
+   SUCCESS PAGE
+   ========================================= */
+
+.success-card {
+
+    max-width: 540px;
+
+    padding-bottom: 25px;
+
+    text-align: center;
+}
+
+.success-card > h1 {
+
+    margin: 8px 30px 10px;
+
+    font-size: 30px;
+
+    color: #0f172a;
+}
+
+.success-icon {
+
+    width: 76px;
+    height: 76px;
+
+    margin: 38px auto 20px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 50%;
+
+    background: #dcfce7;
+
+    color: #16a34a;
+
+    font-size: 40px;
+
+    font-weight: 800;
+
+    box-shadow:
+        0 0 0 10px #f0fdf4;
+
+    animation: successPop 0.5s ease;
+}
+
+@keyframes successPop {
+
+    from {
+        transform: scale(0.5);
+        opacity: 0;
+    }
+
+    to {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+.success-text {
+
+    color: #64748b;
+
+    font-size: 15px;
+
+    margin: 0 25px 22px;
+}
+
+.paid-amount {
+
+    font-size: 42px;
+
+    font-weight: 800;
+
+    color: #2563eb;
+
+    margin: 10px 0 25px;
+}
+
+/* =========================================
+   DETAILS
+   ========================================= */
+
+.details {
+
+    margin: 20px 30px;
+
+    padding: 5px 18px;
+
+    background: #f8fafc;
+
+    border: 1px solid #e2e8f0;
+
+    border-radius: 15px;
+
+    text-align: left;
+}
+
+.detail-row {
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    gap: 15px;
+
+    padding: 14px 0;
+
+    border-bottom: 1px solid #e2e8f0;
+
+    font-size: 13px;
+}
+
+.detail-row:last-child {
+
+    border-bottom: none;
+}
+
+.detail-row span {
+
+    color: #64748b;
+
+    flex-shrink: 0;
+}
+
+.detail-row strong {
+
+    color: #1e293b;
+
+    text-align: right;
+
+    max-width: 65%;
+
+    overflow-wrap: anywhere;
+}
+
+.status {
+
+    color: #16a34a !important;
+
+    font-weight: 700;
+}
+
+/* =========================================
+   SECURE TEXT
+   ========================================= */
+
+.secure-text {
+
+    margin-top: 20px;
+
+    color: #64748b;
+
+    font-size: 13px;
+
+    font-weight: 500;
+}
+
+/* =========================================
+   HISTORY PAGE
+   ========================================= */
+
+.success-card .content {
+
+    padding-top: 25px;
+}
+
+.success-card .content h1 {
+
+    font-size: 28px;
+
+    margin-bottom: 8px;
+}
+
+/* =========================================
+   RESPONSIVE DESIGN
+   ========================================= */
+
+@media (max-width: 600px) {
+
+    .page {
+
+        padding: 15px;
+        align-items: flex-start;
+    }
+
+    .payment-card,
+    .success-card {
+
+        margin-top: 15px;
+
+        border-radius: 18px;
+    }
+
+    .header {
+
+        padding: 18px 20px;
+    }
+
+    .logo {
+
+        font-size: 21px;
+    }
+
+    .secure {
+
+        font-size: 12px;
+
+        padding: 7px 10px;
+    }
+
+    .content {
+
+        padding: 28px 22px;
+    }
+
+    .content h1 {
+
+        font-size: 27px;
+    }
+
+    .details {
+
+        margin-left: 20px;
+        margin-right: 20px;
+    }
+
+    .paid-amount {
+
+        font-size: 36px;
+    }
+}
+
+@media (max-width: 420px) {
+
+    .secure {
+
+        display: none;
+    }
+
+    .header {
+
+        justify-content: center;
+    }
+
+    .row {
+
+        flex-direction: column;
+
+        align-items: flex-start;
+
+        gap: 5px;
+    }
+
+    .row span:last-child {
+
+        text-align: left;
+    }
+
+    .detail-row {
+
+        flex-direction: column;
+
+        align-items: flex-start;
+
+        gap: 5px;
+    }
+
+    .detail-row strong {
+
+        max-width: 100%;
+
+        text-align: left;
+    }
+}

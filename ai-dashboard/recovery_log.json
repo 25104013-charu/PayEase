@@ -1,0 +1,29 @@
+[
+    {
+        "payment_id": "pay_1788369988549",
+        "order_id": "order_1788369988541",
+        "amount_recovered": 0,
+        "action": "ESCALATE FOR REVIEW",
+        "status": "ESCALATED",
+        "date": "2026-09-04T20:51:27.447570",
+        "mode": "DEMO"
+    },
+    {
+        "payment_id": "pay_TY1sBq3nf9rc5a",
+        "order_id": "order_TY1r89dqA6MUv3",
+        "amount_recovered": 700,
+        "action": "RETRY PAYMENT",
+        "status": "RECOVERED",
+        "date": "2026-09-04T22:52:29.110440",
+        "mode": "DEMO"
+    },
+    {
+        "payment_id": "pay_1788369988549",
+        "order_id": "order_1788369988541",
+        "amount_recovered": 0,
+        "action": "ESCALATE FOR REVIEW",
+        "status": "ESCALATED",
+        "date": "2026-09-04T23:16:11.115149",
+        "mode": "DEMO"
+    }
+]

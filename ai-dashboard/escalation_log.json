@@ -1,0 +1,12 @@
+[
+    {
+        "timestamp": "2026-09-04T21:00:00.698103",
+        "payment_id": "pay_1788369988549",
+        "order_id": "order_1788369988541",
+        "amount": 100001,
+        "reason": "Transaction amount exceeds the allowed limit.",
+        "priority": "HIGH",
+        "status": "ESCALATED",
+        "handled_by": "PayEase AI Recovery Agent"
+    }
+]

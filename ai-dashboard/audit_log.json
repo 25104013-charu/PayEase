@@ -1,0 +1,32 @@
+[
+    {
+        "timestamp": "2026-09-03T21:43:13.767202",
+        "payment_id": "pay_1788369988549",
+        "order_id": "order_1788369988541",
+        "amount": 100001,
+        "action": "ESCALATE FOR REVIEW",
+        "failure_reason": "Transaction amount exceeds the allowed limit.",
+        "status": "FAILED",
+        "source": "PayEase AI Revenue Recovery Agent"
+    },
+    {
+        "timestamp": "2026-09-04T20:59:29.126529",
+        "payment_id": "pay_1788370162227",
+        "order_id": "order_1788370162210",
+        "amount": 100001,
+        "action": "REVENUE AT RISK",
+        "failure_reason": "Transaction amount exceeds the allowed limit.",
+        "status": "FAILED",
+        "source": "PayEase AI Revenue Recovery Agent"
+    },
+    {
+        "timestamp": "2026-09-04T22:52:57.899479",
+        "payment_id": "pay_TY1sBq3nf9rc5a",
+        "order_id": "order_TY1r89dqA6MUv3",
+        "amount": 700,
+        "action": "ESCALATE FOR REVIEW",
+        "failure_reason": "Payment failed",
+        "status": "FAILED",
+        "source": "PayEase AI Revenue Recovery Agent"
+    }
+]
