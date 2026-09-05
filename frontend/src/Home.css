@@ -192,6 +192,8 @@
     color: #a78bfa;
 }
 
+/* HERO HEADING */
+
 .hero h1 {
     margin: 25px 0 20px;
 
@@ -202,6 +204,11 @@
     letter-spacing: -3px;
 
     font-weight: 800;
+
+    color: #ffffff;
+
+    text-shadow:
+        0 0 18px rgba(255,255,255,0.15);
 }
 
 .hero h1 span {

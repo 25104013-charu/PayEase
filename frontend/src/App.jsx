@@ -485,13 +485,14 @@ function App() {
                         </button>
 
                         <button
-                            className="history-button"
-                            onClick={() =>
-                                setShowHome(true)
-                            }
-                        >
-                            🏠 Home
-                        </button>
+    className="history-button"
+    onClick={() => {
+        setPayment(null);
+        setShowHome(true);
+    }}
+>
+    🏠 Home
+</button>
 
                     </div>
 
