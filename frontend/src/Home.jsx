@@ -17,7 +17,7 @@ function Home({ onMakePayment }) {
                     <a href="#features">Features</a>
                     <a href="#workflow">How It Works</a>
                     <a
-                        href="http://localhost:8501"
+                        href="https://payease-ai-dashboard.streamlit.app"
                         target="_blank"
                         rel="noreferrer"
                     >
