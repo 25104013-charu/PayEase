@@ -25,7 +25,7 @@ if st.button("🔄 Refresh Transactions"):
 # Payment website button
 st.markdown(
     """
-    <a href="http://localhost:5173" target="_blank">
+    <a href="https://pay-ease-sage.vercel.app/" target="_blank">
         <button style="
             background-color:#2563eb;
             color:white;
@@ -63,7 +63,7 @@ client = Groq(api_key=api_key)
 
 try:
     response = requests.get(
-        "http://localhost:5000/payments",
+        "https://payease-backend-jdhh.onrender.com/payments",
         timeout=5
     )
 
