@@ -85,7 +85,7 @@ function App() {
         try {
             // 1. Create Razorpay order
             const orderResponse = await fetch(
-                "http://localhost:5000/create-order",
+                "https://payease-backend-jdhh.onrender.com/create-order",
                 {
                     method: "POST",
                     headers: {
@@ -133,7 +133,7 @@ function App() {
                         // 3. Verify payment
                         const verifyResponse =
                             await fetch(
-                                "http://localhost:5000/verify-payment",
+                                "https://payease-backend-jdhh.onrender.com/verify-payment",
                                 {
                                     method: "POST",
 
@@ -270,7 +270,7 @@ function App() {
                     try {
 
                         await fetch(
-                            "http://localhost:5000/record-failed-payment",
+                            "https://payease-backend-jdhh.onrender.com/record-failed-payment",
                             {
                                 method: "POST",
 
