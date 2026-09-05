@@ -721,7 +721,7 @@ function App() {
                         className="history-button"
                         onClick={() => {
                             window.location.href =
-                                "http://localhost:8501";
+                                "https://payease-ai-recovery.streamlit.app/";
                         }}
                     >
                         📊 Go to Dashboard
