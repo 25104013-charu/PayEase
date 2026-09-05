@@ -123,7 +123,7 @@ function App() {
                 name: "PayEase",
 
                 description:
-                    "College Registration Payment",
+                    "Make a Payment",
 
                 order_id:
                     orderData.order.id,
@@ -656,7 +656,7 @@ function App() {
                             </span>
 
                             <span>
-                                College Registration
+                                Make a Payment
                             </span>
 
                         </div>
