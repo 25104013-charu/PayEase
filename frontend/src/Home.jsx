@@ -69,7 +69,7 @@ function Home({ onMakePayment }) {
 
                         <a
                             className="secondary-btn"
-                            href="http://localhost:8501"
+                            href="https://payease-ai-recovery.streamlit.app/"
                             target="_blank"
                             rel="noreferrer"
                         >
